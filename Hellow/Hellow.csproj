@@ -43,8 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persons\Actor.cs" />
+    <Compile Include="Persons\Director.cs" />
+    <Compile Include="Imdb.cs" />
+    <Compile Include="Content\MediaContent.cs" />
+    <Compile Include="Content\Movie.cs" />
+    <Compile Include="Persons\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Content\Series.cs" />
+    <Compile Include="Persons\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
