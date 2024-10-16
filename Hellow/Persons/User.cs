@@ -8,5 +8,9 @@ namespace Hellow
 {
     internal class User : Person
     {
+        public void RateContent(MediaContent contentToBeRated, double rating)
+        {
+            contentToBeRated.CalculateNewRating(rating);
+        }
     }
 }

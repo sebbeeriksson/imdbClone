@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Content\Episode.cs" />
+    <Compile Include="Data.cs" />
     <Compile Include="Persons\Actor.cs" />
     <Compile Include="Persons\Director.cs" />
     <Compile Include="Imdb.cs" />

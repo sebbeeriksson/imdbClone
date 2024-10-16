@@ -8,5 +8,16 @@ namespace Hellow
 {
     internal class Actor : Person
     {
+        public int OscarWins;
+        public Movie[] ListOfPastMovies;
+
+
+        Actor(int id, string name, int age, DateTime birthday)
+        {
+            Id = id;
+            Name = name;
+            Age = age;
+            Birthday = birthday;
+        }
     }
 }

@@ -8,10 +8,32 @@ namespace Hellow
 {
     abstract class MediaContent
     {
-        public int id;
-        public string name;
-        public string description;
-        private double rating;
+        public int Id;
+        public int TotalContentCount = 0;
+        public string Title;
+        public string Description;
+        private double Rating;
+        private int NumberOfRatings 
+        {
+            
+            get { return NumberOfRatings; }
+            set { NumberOfRatings = value; }
+        }
+       
+        
+
+        public void CalculateNewRating(double rating) 
+        {
+            if (NumberOfRatings == 0) { Rating = rating; }
+            else{Rating = (NumberOfRatings * Rating + rating) / NumberOfRatings+1;}
+            
+
+            NumberOfRatings++;
+        }
+        
+
          
     }
+
+    
 }
