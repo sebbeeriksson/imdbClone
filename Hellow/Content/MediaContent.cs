@@ -13,17 +13,11 @@ namespace Hellow
         public int Id;
         public string Title;
         public string Description;
-        private float AverageRating;
+        private float AverageRating = 0;
         public List<Rating> Ratings = new List<Rating>();
+        public List<Actor> Actors = new List<Actor>();
+        public List<Director> Directors = new List<Director>();
 
-        private int NumberOfRatings 
-        {
-            
-            get { return NumberOfRatings; }
-            set { NumberOfRatings = value; }
-        }
-       
-        
 
         public void CalculateAndUpdateRating() 
         {
@@ -38,7 +32,10 @@ namespace Hellow
         public void AddNewRating(float ratingValue, User userRater, MediaContent contentRated)
         {
             Ratings.Add(new Rating(ratingValue, userRater, contentRated));
+            
         }
+        public void AddNewActor(Actor actor) {  Actors.Add(actor); }
+        public void AddNewDirector(Director director) {  Directors.Add(director); }
 
 
 

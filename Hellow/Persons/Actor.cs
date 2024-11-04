@@ -12,12 +12,12 @@ namespace Hellow
         public Movie[] ListOfPastMovies;
 
 
-        public Actor(int id, string name, int age, DateTime birthday)
+        public Actor(string name, int age)
         {
-            Id = id;
+            Id = IdGenerator.GetNextActorId();
             Name = name;
             Age = age;
-            Birthday = birthday;
+           
         }
     }
 }

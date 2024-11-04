@@ -16,7 +16,7 @@ namespace Hellow
             new Series(3,"Stranger Things"),
             new Series(4,"The Office"),
         };
-
+        /*
         public static List<Movie> movies = new List<Movie>
         {
             new Movie(1,"The Shawshank Redemption", 142),
@@ -120,5 +120,6 @@ namespace Hellow
             new Episode(4,"The Office S03E04 - Grief Counseling", 21, 3),
             new Episode(4,"The Office S03E05 - Initiation", 22, 3),
         };
+        */
     }
 }

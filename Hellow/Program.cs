@@ -1,19 +1,38 @@
 ﻿using System;
+using System.Threading.Tasks;
+using System.Configuration;
 
 namespace Hellow
 {
-    internal class Program
+    class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Imdb imdb = new Imdb();
-            imdb.InitalzieTestDataToImdb();
+            // Define your Azure AD Authentication connection string
+            string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
-            foreach (var series in imdb.listOfAllSeries)
+            // Initialize the DB class with the connection string
+            var db = new DataBaseLoader(connectionString, imdb);
+
+            // Test the connection and query the database
+            await db.LoadDataFromDBToObjects();
+
+
+
+
+
+
+            // Example: Execute an INSERT command
+            /*
+            string insertQuery = "INSERT INTO Movies (TITLE, LENGTH) VALUES ('New Movie', 120)";
+            await db.ExecuteNonQueryAsync(insertQuery);
+            */
+
+            foreach(Movie movie in imdb.listOfAllMovies) 
             {
-                series.PrintAllEpisodeOfShow();
+                Console.WriteLine(movie.Title);
             }
-
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }

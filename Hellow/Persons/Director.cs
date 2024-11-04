@@ -9,15 +9,15 @@ namespace Hellow
 {
     internal class Director:Person
     {
-        public int oscarWins;
+        public int OscarWins;
         public Movie[] listOfDirectedMovies;
 
-        public Director(int id, string name, int age, DateTime birthday)
+        public Director(int id, string name, int age)
         {
             Id = id;
             Name = name;
             Age = age;
-            Birthday = birthday;
+           
         }
 
     }
