@@ -13,10 +13,9 @@ namespace Hellow
       
         public Movie(string title, int lengthOfMovieMinutes)
         {
-            Id = TotalContentCount;
+            Id = IdGenerator.GetNextMovieId();
             Title = title;
             LengthOfMovie = lengthOfMovieMinutes;
-            TotalContentCount++;
         }
     }
 }

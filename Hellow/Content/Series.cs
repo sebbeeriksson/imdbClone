@@ -9,16 +9,15 @@ namespace Hellow
 {
     internal class Series:MediaContent
     {
-        public string TitleOfShow;
         public int YearOfRealease;
         private int NumberOfEpisodes = 0;
-        public Episode[] Episodes;
+        public List<Episode> Episodes = new List<Episode>();
 
-        public Series(string title)
+        public Series(int seriesID,string title)
         {
-            Id = TotalContentCount;
+            Id = IdGenerator.GetNextSeriesId();
             Title = title;
-            TotalContentCount++;
+            
         }
 
 
@@ -26,8 +25,20 @@ namespace Hellow
 
         public void AddEpisodeToShow(Episode episodeToBeAdded)
         {
-            Episodes.Append(episodeToBeAdded);
+            episodeToBeAdded.SeriesID = Id;
+
+            Episodes.Add(episodeToBeAdded);
+            
             NumberOfEpisodes++;
+        }
+        public void PrintAllEpisodeOfShow()
+        {
+            Console.WriteLine(Title);
+
+            foreach (var episode in Episodes)
+                Console.WriteLine(episode.TitleOfEpisode);
+            {
+            }
         }
         
     }

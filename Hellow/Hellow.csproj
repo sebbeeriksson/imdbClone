@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Content\Episode.cs" />
+    <Compile Include="Content\Rating.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="Persons\Actor.cs" />
     <Compile Include="Persons\Director.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Content\Series.cs" />
     <Compile Include="Persons\User.cs" />
+    <Compile Include="Tools\IdGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -12,7 +12,7 @@ namespace Hellow
         public int oscarWins;
         public Movie[] listOfDirectedMovies;
 
-        Director(int id, string name, int age, DateTime birthday)
+        public Director(int id, string name, int age, DateTime birthday)
         {
             Id = id;
             Name = name;

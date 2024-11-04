@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hellow.Content;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,12 @@ namespace Hellow
 {
     internal class User : Person
     {
-        public void RateContent(MediaContent contentToBeRated, double rating)
+
+        public List<Rating> UsersRatings = new List<Rating>();
+
+        public void RateContent(MediaContent contentToBeRated, float rating)
         {
-            contentToBeRated.CalculateNewRating(rating);
+            contentToBeRated.AddNewRating(rating,this,contentToBeRated);
         }
     }
 }

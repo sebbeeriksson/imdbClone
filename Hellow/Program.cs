@@ -7,32 +7,15 @@ namespace Hellow
         static void Main(string[] args)
         {
             Imdb imdb = new Imdb();
+            imdb.InitalzieTestDataToImdb();
 
-            try
+            foreach (var series in imdb.listOfAllSeries)
             {
-                //initalizing movies and series
-                foreach (var movie in Data.movies)
-                {
-                    imdb.AddContentToImdb(movie);
-                    Console.WriteLine($"Added Movie: {movie.Title}");
-                }
+                series.PrintAllEpisodeOfShow();
+            }
 
-                foreach (var series in Data.seriesList)
-                {
-                    imdb.AddContentToImdb(series);
-                    Console.WriteLine($"Added Series: {series.Title}");
-                }
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-            }
-            finally
-            {
-                Console.WriteLine("Press any key to exit...");
-                Console.ReadKey(); 
-            }
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
         }
     }
 }

@@ -8,7 +8,10 @@ namespace Hellow.Content
 {
     internal class Episode
     {
-        public int Id { get; set; } public string TitleOfEpisode { get; set; }
+        public int Id { get; set; }
+
+        public int SeriesID;
+        public string TitleOfEpisode { get; set; }
         public int Season;
         public int LengthOfEpisode;public string Description { get; set; }
 
@@ -17,6 +20,8 @@ namespace Hellow.Content
        
         public Episode(string title, int lenghtOfEpisode, int season) 
         {
+
+            Id = IdGenerator.GetNextEpisodeId(); 
             TitleOfEpisode = title;
             LengthOfEpisode = lenghtOfEpisode;
             Season = season;
