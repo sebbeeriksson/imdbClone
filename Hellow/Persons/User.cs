@@ -22,7 +22,7 @@ namespace Hellow
         }
         public void RateContent(MediaContent contentToBeRated, float rating)
         {
-            contentToBeRated.AddNewRating(rating,this,contentToBeRated);
+            contentToBeRated.CreateAndAddNewRating(rating,this);
         }
     }
 }

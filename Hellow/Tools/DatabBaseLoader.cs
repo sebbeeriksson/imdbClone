@@ -175,7 +175,7 @@ namespace Hellow
                             float ratingValue = Convert.ToSingle(reader["RATING"]);
                             Rating rating = new Rating(ratingValue, user, content);
                             user.UsersRatings.Add(rating);
-                            content.Ratings.Add(rating);
+                            content.AddNewRating(rating);
                             imdb.listOfAllRatings.Add(rating);
                             
                         }

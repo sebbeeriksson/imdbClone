@@ -104,12 +104,12 @@ namespace Hellow
             {
                 Console.WriteLine($"- Actors and directors in {content.Title}: ");
                 Console.WriteLine("- Actors: ");
-                foreach(var actor in content.Actors)
+                foreach(var actor in content.GetActors())
                 {
                     Console.WriteLine($"- {actor.Name}, Oscar wins: {actor.OscarWins}");
                 }
                 Console.WriteLine("- Directors: ");
-                foreach (var director in content.Directors)
+                foreach (var director in content.GetDirectors())
                 {
                     Console.WriteLine($"- {director.Name}, Oscar wins: {director.OscarWins}");
                 }
