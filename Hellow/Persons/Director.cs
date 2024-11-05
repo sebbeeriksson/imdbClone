@@ -10,14 +10,20 @@ namespace Hellow
     internal class Director:Person
     {
         public int OscarWins;
-        public Movie[] listOfDirectedMovies;
+        public List<MediaContent> ListOfPastContent = new List<MediaContent>();
 
-        public Director(int id, string name, int age)
+        public Director(string name, int age)
         {
-            Id = id;
+            Id = IdGenerator.GetNextDirectorId();
+
             Name = name;
             Age = age;
            
+        }
+
+        public void AddContentToDirector(MediaContent contentToBeAdded)
+        {
+            ListOfPastContent.Add(contentToBeAdded);
         }
 
     }

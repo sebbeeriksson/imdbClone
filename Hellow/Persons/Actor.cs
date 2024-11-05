@@ -9,7 +9,7 @@ namespace Hellow
     internal class Actor : Person
     {
         public int OscarWins = 0;
-        public Movie[] ListOfPastMovies;
+        public List<MediaContent> ListOfPastContent = new List<MediaContent>();
 
 
         public Actor(string name, int age)
@@ -18,6 +18,11 @@ namespace Hellow
             Name = name;
             Age = age;
            
+        }
+
+        public void AddContentToActor(MediaContent contentToBeAdded)
+        {
+            ListOfPastContent.Add(contentToBeAdded);
         }
     }
 }

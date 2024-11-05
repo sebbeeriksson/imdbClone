@@ -9,13 +9,7 @@ namespace Hellow
 {
     internal static class Data
     {
-        public static List<Series> seriesList = new List<Series>
-        {
-            new Series(1,"Breaking Bad"),
-            new Series(2,"Game of Thrones"),
-            new Series(3,"Stranger Things"),
-            new Series(4,"The Office"),
-        };
+        
         /*
         public static List<Movie> movies = new List<Movie>
         {

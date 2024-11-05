@@ -13,7 +13,7 @@ namespace Hellow
         private int NumberOfEpisodes = 0;
         public List<Episode> Episodes = new List<Episode>();
 
-        public Series(int seriesID,string title)
+        public Series(string title)
         {
             Id = IdGenerator.GetNextSeriesId();
             Title = title;
